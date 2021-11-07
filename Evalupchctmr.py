@@ -20,7 +20,7 @@ import tensorflow as tf
 
 from skimage import transform
 import data_loader, losses
-import  model620 as model  #model256
+import  model  #model
 import nibabel as nib
 import cv2
 
