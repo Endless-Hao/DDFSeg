@@ -287,7 +287,7 @@ def main(config_filename):
             chkpt_fname = tf.train.latest_checkpoint(checkpoint_path)
             print(chkpt_fname)
             modelname = i
-            saver.restore(sess, modelname)  # 20191009-231608/sifa-16499
+            saver.restore(sess, modelname)  
             print('finish loading model!')
 
             total_dice = np.zeros((4,))
@@ -314,7 +314,7 @@ def main(config_filename):
                 img_arr = np.expand_dims(img_arr, 0)
 
                 output = np.zeros((img_arr.shape[0], img_arr.shape[1], img_arr.shape[2]))
-                output_numpy = sess.run(pch_model.pred_mask_b,  # sifa_model.fake_images_a
+                output_numpy = sess.run(pch_model.pred_mask_b, 
                                         feed_dict={pch_model.input_b: img_arr,
                                                    pch_model.is_training: False})
 
