@@ -551,12 +551,7 @@ class PCH:
                     writer.flush()
                     self.num_fake_inputs += 1
 
-                    # # IF every save_interval save model
-                    # if (cnt+1) % save_interval ==0:
-                    #     saver.save(sess, os.path.join(
-                    #         self._output_dir, "pch"), global_step=cnt)
-
-                #if save the best val model
+                #save the best val model
                 print("Processing val {}".format(i))
                 max_inter_val = np.uint16(np.floor(len(rows_t_val) / BATCH_SIZE))
                 val_dice_list = []
