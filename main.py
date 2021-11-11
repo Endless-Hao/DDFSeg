@@ -567,7 +567,7 @@ class PCH:
                 print(len(val_dice_list), val_dice_mean)
                 if(val_dice_mean > val_dice):
                     val_dice = val_dice_mean
-                    saver.save(sess, os.path.join(self._output_dir, self._kfold, "pch"), global_step=cnt)
+                    saver.save(sess, os.path.join(self._output_dir, "pch"), global_step=cnt)
 
                 sess.run(tf.assign(self.global_step, epoch + 1))
 
