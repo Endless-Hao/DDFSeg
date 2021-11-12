@@ -206,7 +206,7 @@ def main(config_filename):
     gpu_options = tf.GPUOptions(allow_growth=True)
     with tf.Session(config=tf.ConfigProto(gpu_options=gpu_options)) as sess:
         sess.run(init)
-        modellist=['./output/20200705-093821/pch-16799']
+        modellist=['modelfile']
         allresult = open('./result/mytest/dice.txt', 'a+')
         for i in modellist:
             arr=[]
